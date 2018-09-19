@@ -5,19 +5,19 @@ prefix parallel
 # sample-test                        : PASS,FLAKY
 
 [true] # This section applies to all platforms
+# https://github.com/nodejs/node/issues/21038
+test-trace-events-fs-sync: PASS,FLAKY
 
 [$system==win32]
-test-cluster-net-send                : PASS,FLAKY
-test-tls-ticket-cluster              : PASS,FLAKY
-test-child-process-fork-regr-gh-2847 : PASS,FLAKY
 
 [$system==linux]
-test-http-client-timeout-event       : PASS,FLAKY
-test-child-process-buffering         : PASS,FLAKY
-test-child-process-exit-code         : PASS,FLAKY
 
 [$system==macos]
+
+[$arch==arm || $arch==arm64]
 
 [$system==solaris] # Also applies to SmartOS
 
 [$system==freebsd]
+
+[$system==aix]

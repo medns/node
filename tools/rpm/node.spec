@@ -22,7 +22,7 @@ Summary: Node.js is a platform for building fast, scalable network applications.
 Group: Development/Languages
 License: MIT
 URL: https://nodejs.org/
-Source0: http://nodejs.org/dist/v%{_version}/node-v%{_version}.tar.gz
+Source0: https://nodejs.org/dist/v%{_version}/node-v%{_version}.tar.gz
 BuildRequires: gcc
 BuildRequires: gcc-c++
 BuildRequires: glibc-devel
@@ -94,7 +94,6 @@ done
 /usr/include/*
 /usr/lib/node_modules/
 /usr/share/doc/node/gdbinit
-/usr/share/doc/node/tick-processor
 /usr/share/man/man1/node.1.gz
 /usr/share/systemtap/tapset/node.stp
 %{_datadir}/%{name}/
@@ -102,9 +101,6 @@ done
 
 
 %changelog
-* Tue Sep 22 2015 Matt Loring <mattloring@google.com>
-- Added tick processor.
-
 * Tue Jul 7 2015 Ali Ijaz Sheikh <ofrobots@google.com>
 - Added gdbinit.
 
